@@ -8,6 +8,7 @@ const supabase = createClient(
   'sb_publishable_O39lSYIcnMP-AjD2y7uh0Q_QpkIob9I'
 );
  
+// 🔁 Change monthly
 const POLL_ID = '2026-05-book-club';
  
 const BOOKS = [
@@ -27,6 +28,36 @@ const BOOKS = [
     id: 3,
     title: 'Book Three',
     cover: 'https://covers.openlibrary.org/b/id/10909258-L.jpg',
+    link: 'https://app.thestorygraph.com'
+  },
+  {
+    id: 4,
+    title: 'Book Four',
+    cover: 'https://covers.openlibrary.org/b/id/9876543-L.jpg',
+    link: 'https://app.thestorygraph.com'
+  },
+  {
+    id: 5,
+    title: 'Book Five',
+    cover: 'https://covers.openlibrary.org/b/id/8765432-L.jpg',
+    link: 'https://app.thestorygraph.com'
+  },
+  {
+    id: 6,
+    title: 'Book Six',
+    cover: 'https://covers.openlibrary.org/b/id/7654321-L.jpg',
+    link: 'https://app.thestorygraph.com'
+  },
+  {
+    id: 7,
+    title: 'Book Seven',
+    cover: 'https://covers.openlibrary.org/b/id/6543210-L.jpg',
+    link: 'https://app.thestorygraph.com'
+  },
+  {
+    id: 8,
+    title: 'Book Eight',
+    cover: 'https://covers.openlibrary.org/b/id/5432109-L.jpg',
     link: 'https://app.thestorygraph.com'
   }
 ];
@@ -100,7 +131,8 @@ export default function Page() {
             padding: 12,
             border: '1px solid #ddd',
             marginBottom: 10,
-            borderRadius: 8
+            borderRadius: 8,
+            alignItems: 'center'
           }}
         >
           <img
@@ -114,7 +146,7 @@ export default function Page() {
           <div style={{ flex: 1 }}>
             <strong>#{index + 1} {book.title}</strong>
             <div>
-              <a href={book.link} target="_blank" rel="noreferrer">
+              <a href={book.link} target="_blank" rel="noopener noreferrer">
                 View on StoryGraph
               </a>
             </div>
@@ -141,3 +173,4 @@ export default function Page() {
     </main>
   );
 }
+``
